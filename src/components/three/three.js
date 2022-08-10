@@ -1,4 +1,6 @@
-import { Suspense, useEffect, useRef } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
+import gsap from "gsap";
+
 //R3F
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { OrbitControls, Stars, Environment } from "@react-three/drei";
@@ -50,26 +52,42 @@ function Rig() {
   const { camera, mouse } = useThree();
   const vec = new THREE.Vector3();
 
+  gsap.to(camera.position, {
+    x: -50,
+    y: 20,
+    z: 300,
+    onUpdate: function () {
+      camera.lookAt(0, 0, 0);
+    },
+    ease: "circ.out",
+    duration: 2,
+  });
+
   return useFrame(() =>
-    camera.position.lerp(
-      vec.set(mouse.x * 50, mouse.y * 50, camera.position.z),
-      0.02
-    )
+    camera.position.lerp(vec.set(mouse.x * 50, mouse.y * 50, 300), 0.02)
   );
 }
 
-const Animation = (props) => {
+function Transition() {}
+
+const Animation = ({ trig }) => {
+  // const cameraRef = useRef(null);
+  // const cam = Transition();
+  // const { camera } = useThree();
+
   useEffect(() => {
     console.log("rerender");
-    // console.log(Rig);
+    // console.log(camera);
+    // console.log(cam);
   }, []);
-
+  //camera starting position: [80, 80, 25]
+  //end positon without orbit controls or some fancy shits:  [-50, 20, 300]
   return (
-    <Canvas camera={{ position: [-100, -100, 20] }}>
+    <Canvas camera={{ position: [80, 80, 25] }}>
       <Stars />
       <Suspense fallback={null}>
         <Model />
-        <OrbitControls />
+        {/* <OrbitControls /> */}
         {/* <Environment preset="sunset" background /> */}
       </Suspense>
 
@@ -80,7 +98,7 @@ const Animation = (props) => {
       <ambientLight intensity={0.5} />
       <spotLight position={[100, 500, 100]} angle={0.9} />
       {/* <OrbitControls /> */}
-      {/* <Rig /> */}
+      {trig && <Rig />}
     </Canvas>
   );
 };
@@ -100,5 +118,7 @@ const Animation = (props) => {
 //
 
 //also the gradient should be animated
+
+//თუ ქარდები ამოიწურა დაათრიგერე ტრიგერი
 
 export default Animation;
