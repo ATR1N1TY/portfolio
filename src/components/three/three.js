@@ -1,9 +1,9 @@
 import { Suspense, useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-
+import LoadingScreen from "../loadingScreen/LoadingScreen";
 //R3F
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { OrbitControls, Stars, Environment } from "@react-three/drei";
+import { OrbitControls, Stars, Environment, Html } from "@react-three/drei";
 // import { AmbientLight } from "three";
 // import wfa from '../../../public/logoModel.glb'
 //libraires for importing logo model
@@ -68,8 +68,6 @@ function Rig() {
   );
 }
 
-function Transition() {}
-
 const Animation = ({ trig }) => {
   // const cameraRef = useRef(null);
   // const cam = Transition();
@@ -84,19 +82,19 @@ const Animation = ({ trig }) => {
   //end positon without orbit controls or some fancy shits:  [-50, 20, 300]
   return (
     <Canvas camera={{ position: [80, 80, 25] }}>
-      <Stars />
-      <Suspense fallback={null}>
+      <Suspense fallback={<LoadingScreen />}>
         <Model />
+        <Stars />
         {/* <OrbitControls /> */}
         {/* <Environment preset="sunset" background /> */}
+        {/* <ambientLight intensity={0.5} /> */}
+        {/* <spotLight position={[100, 500, 100]} angle={0.9} /> */}
       </Suspense>
 
       {/* <mesh scale={[100, 0, 100]}>
         <planeGeometry />
       </mesh> */}
 
-      <ambientLight intensity={0.5} />
-      <spotLight position={[100, 500, 100]} angle={0.9} />
       {/* <OrbitControls /> */}
       {trig && <Rig />}
     </Canvas>
