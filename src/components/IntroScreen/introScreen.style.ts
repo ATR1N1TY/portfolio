@@ -6,7 +6,7 @@ export const StyledIntroScreen = styled(IntroScreen)`
   width: 50%;
   margin-left: 50%;
   /* border: 1px solid red; */
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
   flex-flow: column;
