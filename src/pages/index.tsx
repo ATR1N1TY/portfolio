@@ -24,6 +24,10 @@ import qlLogo from "../../public/assets/technologies/graphql.png";
 import gitLogo from "../../public/assets/technologies/Git_icon.svg.png";
 import eFull from "../../public/assets/svgs/e4.svg";
 import etester from "../../public/assets/svgs/etester.svg";
+import { StyledProjectCard } from "../components/projectCard/projectCard.style";
+import mock from "../../public/assets/pictures/mock.jpg";
+import mock1 from "../../public/assets/pictures/mock1.jpg";
+import mock2 from "../../public/assets/pictures/mock2.jpg";
 
 const Home: NextPage = () => {
   const [trigger, setTrigger] = useState<boolean>(false);
@@ -115,7 +119,16 @@ const Home: NextPage = () => {
           </div>
         </section>
 
-        <section className="projects"></section>
+        <section className="projects">
+          <div className="projectsSection">
+            <StyledProjectCard title="Weatherma" image={mock} />
+            <StyledProjectCard title="GlassComm" image={mock1} />
+            <StyledProjectCard title="QuickSander" image={mock2} />
+          </div>
+          <div className="projectsTitle">
+            <h1>My Projects</h1>
+          </div>
+        </section>
 
         <section className="about"></section>
 
