@@ -29,8 +29,16 @@ import mock from "../../public/assets/pictures/mock.jpg";
 import mock1 from "../../public/assets/pictures/mock1.jpg";
 import mock2 from "../../public/assets/pictures/mock2.jpg";
 import mePicture from "../../public/assets/pictures/me.jpg";
+import { MdCopyAll } from "react-icons/md";
+import { BsLinkedin } from "react-icons/bs";
+import { BsYoutube } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
+import { BsTwitter } from "react-icons/bs";
+import { MdDone } from "react-icons/md";
+
 const Home: NextPage = () => {
   const [trigger, setTrigger] = useState<boolean>(false);
+  const [showElement, setShowElement] = useState<boolean>(false);
 
   const handleOverflow = () => {
     const body = window.document.body;
@@ -41,6 +49,12 @@ const Home: NextPage = () => {
     console.log(trigger);
     handleOverflow();
   }, [trigger]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowElement(false);
+    }, 1000);
+  }, [showElement]);
 
   return (
     <div className="home">
@@ -153,7 +167,32 @@ const Home: NextPage = () => {
           </div>
         </section>
 
-        <section className="contact"></section>
+        <section className="contact">
+          <div className="contactTitle">
+            <h1>Contact Me</h1>
+          </div>
+          <div className="contactContent">
+            <div className="social">
+              <BsLinkedin />
+              <BsGithub />
+              <BsTwitter />
+              <BsYoutube />
+            </div>
+            <div className="emailme">
+              <span>saba4inasaridze@gmail.com</span>
+              <MdCopyAll
+                onClick={() => {
+                  {
+                    setShowElement(true);
+                    navigator.clipboard.writeText("saba4inasaridze@gmail.com");
+                  }
+                }}
+                className="s"
+              />
+            </div>
+            <MdDone className="done" style={{ opacity: showElement ? 1 : 0 }} />
+          </div>
+        </section>
       </div>
 
       {/* projects */}
