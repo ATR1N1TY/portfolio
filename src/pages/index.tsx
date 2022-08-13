@@ -28,7 +28,7 @@ import { StyledProjectCard } from "../components/projectCard/projectCard.style";
 import mock from "../../public/assets/pictures/mock.jpg";
 import mock1 from "../../public/assets/pictures/mock1.jpg";
 import mock2 from "../../public/assets/pictures/mock2.jpg";
-
+import mePicture from "../../public/assets/pictures/me.jpg";
 const Home: NextPage = () => {
   const [trigger, setTrigger] = useState<boolean>(false);
 
@@ -126,11 +126,31 @@ const Home: NextPage = () => {
             <StyledProjectCard title="QuickSander" image={mock2} />
           </div>
           <div className="projectsTitle">
-            <h1>My Projects</h1>
+            <h1>My TOP Projects</h1>
           </div>
         </section>
 
-        <section className="about"></section>
+        <section className="about">
+          <div className="aboutSection">
+            <p className="cooperation">
+              {" "}
+              <i>
+                {" "}
+                <span>Evolution made us cooperative, not competetive</span>{" "}
+              </i>
+            </p>
+            <p>I always had great attitude about writing software</p>
+            <p>But also love connecting with people</p>
+            <p>we can build so many things together</p>
+            <p>so let&#39;s work together!</p>
+          </div>
+          <div className="aboutTitle">
+            <div className="picture"></div>
+            <h1>
+              Little <br /> Bit <br /> More <br /> About <br /> Me...
+            </h1>
+          </div>
+        </section>
 
         <section className="contact"></section>
       </div>
@@ -138,6 +158,18 @@ const Home: NextPage = () => {
       {/* projects */}
       {/* <StyledProjectsPage /> */}
       {/* <StyledThree trig={trigger} /> */}
+
+      {/* კომპიუტერების მიმართ ყოველთვის კარგი დამოკიდებულება მქონდა */}
+      {/* აგრეთვე კარგი დამოკიდებულება მაქვს ადამიანების მიმართ */}
+      {/* როდესაც საქმე კონკურენციას ეხება ყოველთვის ვამჯობინებ კოოპერაციას */}
+
+      {/* I always had great attitude about writing software*/}
+      {/* But also love connecting with people */}
+
+      {/* Evolution made us cooperative, not competetive*/}
+      {/* we can build so many things together */}
+
+      {/* so let's work together! */}
     </div>
   );
 };
