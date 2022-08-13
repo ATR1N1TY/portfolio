@@ -136,7 +136,7 @@ const Home: NextPage = () => {
               {" "}
               <i>
                 {" "}
-                <span>Evolution made us cooperative, not competetive</span>{" "}
+                <span>Little thing I want to say...</span>{" "}
               </i>
             </p>
             <p>I always had great attitude about writing software</p>
@@ -147,7 +147,8 @@ const Home: NextPage = () => {
           <div className="aboutTitle">
             <div className="picture"></div>
             <h1>
-              Little <br /> Bit <br /> More <br /> About <br /> Me...
+              Evolution <br /> made us <br /> cooperative, <br /> not
+              competetive
             </h1>
           </div>
         </section>
