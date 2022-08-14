@@ -30,7 +30,7 @@ const Home: NextPage = () => {
         <ContactSection />
       </div>
 
-      {/* <StyledThree trig={trigger} /> */}
+      {/* <StyledThree trig={trigger}  */}
     </div>
   );
 };
