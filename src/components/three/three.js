@@ -105,7 +105,7 @@ function Rig() {
   // });
 }
 
-const Animation = ({ trig, className, mouseCords }) => {
+const Animation = ({ trig, className }) => {
   // const cameraRef = useRef(null);
   // const cam = Transition();
   // const { camera } = useThree();
