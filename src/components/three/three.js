@@ -52,6 +52,14 @@ function Rig() {
   const { camera, mouse } = useThree();
   const vec = new THREE.Vector3();
 
+  // let timeline = gsap.timeline({ repeatDelay: 1 });
+
+  // useEffect(() => {
+  //   console.log(mouse);
+  // }, [mouse]);
+
+  //rig should use useMouse hook which will tell mouse coordinates
+
   gsap.to(camera.position, {
     x: -50,
     y: 20,
@@ -61,14 +69,43 @@ function Rig() {
     },
     ease: "circ.out",
     duration: 2,
+    // repeat: -1,
   });
 
-  return useFrame(() =>
-    camera.position.lerp(vec.set(mouse.x * 50, mouse.y * 50, 300), 0.02)
-  );
+  // gsap.from(camera.position, {
+  //   x: -50,
+  //   y: 20,
+  //   z: 300,
+  //   // onUpdate: function () {
+  //   //   camera.lookAt(0, 0, 0);
+  //   // },
+  //   // ease: "circ.out",
+  //   // duration: 10,
+  //   // repeat: -1,
+  //   delay: 2,
+  // });
+
+  gsap.to(camera.position, {
+    x: 150,
+    y: 100,
+    z: 300,
+    onUpdate: function () {
+      camera.lookAt(0, 0, 0);
+    },
+    ease: "linear",
+    duration: 60,
+    repeat: -1,
+    yoyo: true,
+    delay: 2,
+  });
+
+  // return useFrame(() => {
+  //   // console.log(mouse);
+  //   camera.position.lerp(vec.set(mouse.x * 50, mouse.y * 50, 300), 0.02);
+  // });
 }
 
-const Animation = ({ trig }) => {
+const Animation = ({ trig, className, mouseCords }) => {
   // const cameraRef = useRef(null);
   // const cam = Transition();
   // const { camera } = useThree();
@@ -81,23 +118,25 @@ const Animation = ({ trig }) => {
   //camera starting position: [80, 80, 25]
   //end positon without orbit controls or some fancy shits:  [-50, 20, 300]
   return (
-    <Canvas camera={{ position: [80, 80, 25] }}>
-      <Suspense fallback={<LoadingScreen />}>
-        <Model />
-        <Stars />
-        {/* <OrbitControls /> */}
-        {/* <Environment preset="sunset" background /> */}
-        {/* <ambientLight intensity={0.5} /> */}
-        {/* <spotLight position={[100, 500, 100]} angle={0.9} /> */}
-      </Suspense>
+    <div className={className}>
+      <Canvas camera={{ position: [80, 80, 25] }}>
+        <Suspense fallback={<LoadingScreen />}>
+          <Model />
+          <Stars />
+          {/* <OrbitControls /> */}
+          {/* <Environment preset="sunset" background /> */}
+          {/* <ambientLight intensity={0.5} /> */}
+          {/* <spotLight position={[100, 500, 100]} angle={0.9} /> */}
+        </Suspense>
 
-      {/* <mesh scale={[100, 0, 100]}>
+        {/* <mesh scale={[100, 0, 100]}>
         <planeGeometry />
       </mesh> */}
 
-      {/* <OrbitControls /> */}
-      {trig && <Rig />}
-    </Canvas>
+        {/* <OrbitControls /> */}
+        {trig && <Rig />}
+      </Canvas>
+    </div>
   );
 };
 
