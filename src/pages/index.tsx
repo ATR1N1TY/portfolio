@@ -6,9 +6,7 @@ import { StyledThree } from "../components/three/three.style";
 import { StyledGlass } from "../components/glassmorphicCard/glass.style";
 
 import { StyledProjectCard } from "../components/projectCard/projectCard.style";
-import mock from "../../public/assets/pictures/mock.jpg";
-import mock1 from "../../public/assets/pictures/mock1.jpg";
-import mock2 from "../../public/assets/pictures/mock2.jpg";
+
 import { MdCopyAll } from "react-icons/md";
 import { BsLinkedin } from "react-icons/bs";
 import { BsYoutube } from "react-icons/bs";
@@ -19,6 +17,7 @@ import { MdDone } from "react-icons/md";
 //after
 import Hero from "../components/hero/hero";
 import TechSection from "../components/techSection/techSection";
+import ProjectsSection from "../components/projectsSection/projectsSection";
 
 const Home: NextPage = () => {
   const [trigger, setTrigger] = useState<boolean>(false);
@@ -41,17 +40,7 @@ const Home: NextPage = () => {
 
       <div className="sections">
         <TechSection />
-
-        <section className="projects">
-          <div className="projectsSection">
-            <StyledProjectCard title="Weatherma" image={mock} />
-            <StyledProjectCard title="GlassComm" image={mock1} />
-            <StyledProjectCard title="QuickSander" image={mock2} />
-          </div>
-          <div className="projectsTitle">
-            <h1>My TOP Projects</h1>
-          </div>
-        </section>
+        <ProjectsSection />
 
         <section className="about">
           <div className="aboutSection">
