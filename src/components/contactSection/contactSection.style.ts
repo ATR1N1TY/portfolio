@@ -41,7 +41,7 @@ export const StyledContactSection = styled.section`
     cursor: pointer;
   }
 
-  .social > * {
+  .social > a > * {
     width: 100px;
     height: 100px;
     margin: 1rem;

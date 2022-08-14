@@ -24,10 +24,34 @@ const ContactSection = () => {
 
       <div className="contactContent">
         <div className="social">
-          <BsLinkedin />
-          <BsGithub />
-          <BsTwitter />
-          <BsYoutube />
+          <a
+            href="https://www.linkedin.com/in/saba-i-069924138/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <BsLinkedin />
+          </a>
+          <a
+            href="https://github.com/ATR1N1TY"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <BsGithub />
+          </a>
+          <a
+            href="https://twitter.com/atrinitos"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <BsTwitter />
+          </a>
+          <a
+            href="https://www.youtube.com/indiespace"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <BsYoutube />
+          </a>
         </div>
 
         <div className="emailme">
