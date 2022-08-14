@@ -36,4 +36,8 @@ export const StyledHero = styled.section`
       opacity: 1;
     }
   }
+
+  @media screen and (max-width: 1280px) {
+    background-color: #212121;
+  }
 `;

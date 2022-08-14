@@ -31,4 +31,17 @@ export const StyledProjectCard = styled(ProjectCard)`
     color: white;
     transition: all 0.3s;
   }
+
+  @media screen and (max-width: 1280px) {
+    width: 24rem;
+    height: 12rem;
+
+    .projectImage {
+      border-radius: 10px;
+    }
+
+    .title {
+      font-size: 2rem;
+    }
+  }
 `;

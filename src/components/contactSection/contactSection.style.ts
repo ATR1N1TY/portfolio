@@ -63,4 +63,16 @@ export const StyledContactSection = styled.section`
     opacity: 0;
     transition: all 0.2s;
   }
+
+  @media screen and (max-width: 1280px) {
+    background-color: #212121;
+
+    .contactTitle {
+      /* border: 3px solid green; */
+      height: 100%;
+    }
+    .contactContent {
+      /* border: 3px solid violet; */
+    }
+  }
 `;

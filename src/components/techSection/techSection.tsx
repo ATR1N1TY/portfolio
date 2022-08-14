@@ -20,6 +20,7 @@ const TechSection = () => {
       <div className="techTitle">
         <h1>Technologies I use</h1>
       </div>
+
       <div className="content">
         <div className="tech">
           <Image src={htmlLogo} alt="tech" />
@@ -37,9 +38,6 @@ const TechSection = () => {
           <Image src={reactLogo} alt="tech" />
         </div>
         <div className="tech">
-          <Image src={nextLogo} alt="tech" />
-        </div>
-        <div className="tech">
           <Image src={reduxLogo} alt="tech" />
         </div>
         <div className="tech">
@@ -53,6 +51,9 @@ const TechSection = () => {
         </div>
         <div className="tech">
           <Image src={gitLogo} alt="tech" />
+        </div>
+        <div className="tech">
+          <Image src={nextLogo} alt="tech" />
         </div>
       </div>
     </StyledTechSection>

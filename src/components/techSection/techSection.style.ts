@@ -47,11 +47,8 @@ export const StyledTechSection = styled.section`
   }
 
   @media screen and (max-width: 1536px) {
-    /* border: 3px solid red; */
     .content {
       gap: 0;
-      /* border: 3px solid green; */
-      /* width: 30%; */
       padding: 4rem;
       width: 55%;
     }
@@ -62,8 +59,30 @@ export const StyledTechSection = styled.section`
     }
 
     .techTitle {
-      /* border: 3px solid red; */
       width: 45%;
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    flex-direction: column;
+    background-color: #252525;
+
+    .techTitle {
+      width: 100%;
+      height: 15%;
+    }
+
+    .content {
+      margin: 0 auto;
+      padding: 1rem;
+      gap: 1rem;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+
+    .content > .tech {
+      width: 150px;
+      height: 150px;
     }
   }
 `;

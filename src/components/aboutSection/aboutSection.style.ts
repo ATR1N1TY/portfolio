@@ -80,4 +80,29 @@ export const StyledAboutSection = styled.section`
       height: 300px;
     }
   }
+
+  @media screen and (max-width: 1536px) {
+    background-color: #252525;
+
+    .aboutTitle {
+    }
+
+    .aboutTitle h1 {
+      font-size: 2.5rem;
+      left: -10px;
+    }
+
+    .picture {
+      left: 50px;
+    }
+
+    .aboutSection {
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    .cooperation {
+      border: 3px solid rgba(255, 255, 255, 1);
+    }
+  }
 `;

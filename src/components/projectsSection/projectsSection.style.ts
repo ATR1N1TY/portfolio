@@ -42,4 +42,21 @@ export const StyledProjectsSection = styled.section`
       font-size: 2.5rem;
     }
   }
+
+  @media screen and (max-width: 1280px) {
+    flex-direction: column-reverse;
+    background-color: #212121;
+    justify-content: center;
+
+    .projectsTitle {
+      width: 100%;
+      height: 15%;
+    }
+
+    .projectsSection {
+      width: 100%;
+      height: auto;
+      flex-direction: row;
+    }
+  }
 `;

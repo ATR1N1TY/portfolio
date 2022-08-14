@@ -43,4 +43,17 @@ export const StyledGlass = styled(Glass)`
       font-size: 1.5rem;
     }
   }
+
+  @media screen and (max-width: 1280px) {
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 30px;
+    }
+  }
 `;
