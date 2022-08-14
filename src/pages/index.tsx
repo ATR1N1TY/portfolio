@@ -18,6 +18,7 @@ import { MdDone } from "react-icons/md";
 import Hero from "../components/hero/hero";
 import TechSection from "../components/techSection/techSection";
 import ProjectsSection from "../components/projectsSection/projectsSection";
+import AboutSection from "../components/aboutSection/aboutSection";
 
 const Home: NextPage = () => {
   const [trigger, setTrigger] = useState<boolean>(false);
@@ -41,29 +42,7 @@ const Home: NextPage = () => {
       <div className="sections">
         <TechSection />
         <ProjectsSection />
-
-        <section className="about">
-          <div className="aboutSection">
-            <p className="cooperation">
-              {" "}
-              <i>
-                {" "}
-                <span>Little thing I want to say...</span>{" "}
-              </i>
-            </p>
-            <p>I always had great attitude about writing software</p>
-            <p>But also love connecting with people</p>
-            <p>we can build so many things together</p>
-            <p>so let&#39;s work together!</p>
-          </div>
-          <div className="aboutTitle">
-            <div className="picture"></div>
-            <h1>
-              Evolution <br /> made us <br /> cooperative, <br /> not
-              competetive
-            </h1>
-          </div>
-        </section>
+        <AboutSection />
 
         {/* contact */}
         <section className="contact">
