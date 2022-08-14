@@ -1,16 +1,9 @@
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";
-import Head from "next/head";
 import Image from "next/image";
 import { StyledIntroScreen } from "../components/IntroScreen/introScreen.style";
 import { StyledThree } from "../components/three/three.style";
 import { StyledGlass } from "../components/glassmorphicCard/glass.style";
-import { StyledProjectsPage } from "../components/projectsPage/projects.style";
-import styles from "./styles/Home.module.css";
-import elephant from "../../public/assets/svgs/e1.svg";
-import elephant1 from "../../public/assets/svgs/e2.svg";
-import elephant2 from "../../public/assets/svgs/e3.svg";
-import elephant3 from "../../public/assets/svgs/e4.svg";
 import htmlLogo from "../../public/assets/technologies/html.png";
 import cssLogo from "../../public/assets/technologies/css.png";
 import jsLogo from "../../public/assets/technologies/js.png";
@@ -22,13 +15,10 @@ import scLogo from "../../public/assets/technologies/sc.png";
 import twLogo from "../../public/assets/technologies/tailwind.png";
 import qlLogo from "../../public/assets/technologies/graphql.png";
 import gitLogo from "../../public/assets/technologies/Git_icon.svg.png";
-import eFull from "../../public/assets/svgs/e4.svg";
-import etester from "../../public/assets/svgs/etester.svg";
 import { StyledProjectCard } from "../components/projectCard/projectCard.style";
 import mock from "../../public/assets/pictures/mock.jpg";
 import mock1 from "../../public/assets/pictures/mock1.jpg";
 import mock2 from "../../public/assets/pictures/mock2.jpg";
-import mePicture from "../../public/assets/pictures/me.jpg";
 import { MdCopyAll } from "react-icons/md";
 import { BsLinkedin } from "react-icons/bs";
 import { BsYoutube } from "react-icons/bs";
@@ -46,11 +36,6 @@ const Home: NextPage = () => {
   };
 
   useEffect(() => {
-    console.log(trigger);
-    handleOverflow();
-  }, [trigger]);
-
-  useEffect(() => {
     setTimeout(() => {
       setShowElement(false);
     }, 1000);
@@ -59,16 +44,8 @@ const Home: NextPage = () => {
   return (
     <div className="home">
       <section className="hero">
-        {/* introScreen 1 */}
+        {/* intro */}
         {!trigger && <StyledIntroScreen triggerCallback={setTrigger} />}
-
-        {/* introScreen */}
-        {/* <StyledIntroScreen>
-        <h1>
-          but, <br /> great <span>user experience</span> requires great frontend
-          development
-        </h1>
-      </StyledIntroScreen> */}
 
         {trigger && (
           <div className="wrapper">
@@ -83,15 +60,9 @@ const Home: NextPage = () => {
             </StyledGlass>
           </div>
         )}
-
-        {/* <div className="bg"> */}
-        {/* </div> */}
-
-        {/* contact */}
       </section>
 
       <div className="sections">
-        {/* <Image className="bg" src={etester} alt="el" /> */}
         <section className="techs">
           <div className="techTitle">
             <h1>Technologies I use</h1>
@@ -167,6 +138,7 @@ const Home: NextPage = () => {
           </div>
         </section>
 
+        {/* contact */}
         <section className="contact">
           <div className="contactTitle">
             <h1>Contact Me</h1>
@@ -195,21 +167,8 @@ const Home: NextPage = () => {
         </section>
       </div>
 
-      {/* projects */}
-      {/* <StyledProjectsPage /> */}
       {/* <StyledThree trig={trigger} /> */}
-
-      {/* კომპიუტერების მიმართ ყოველთვის კარგი დამოკიდებულება მქონდა */}
-      {/* აგრეთვე კარგი დამოკიდებულება მაქვს ადამიანების მიმართ */}
-      {/* როდესაც საქმე კონკურენციას ეხება ყოველთვის ვამჯობინებ კოოპერაციას */}
-
-      {/* I always had great attitude about writing software*/}
-      {/* But also love connecting with people */}
-
-      {/* Evolution made us cooperative, not competetive*/}
-      {/* we can build so many things together */}
-
-      {/* so let's work together! */}
+      <div className="backgroundCont"></div>
     </div>
   );
 };
