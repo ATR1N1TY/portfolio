@@ -11,6 +11,7 @@ export const StyledContactSection = styled.section`
     font-size: 3rem;
     display: flex;
     align-items: center;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.8);
     justify-content: center;
   }
 

@@ -29,6 +29,7 @@ export const StyledProjectsSection = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.8);
     font-size: 3rem;
   }
 `;

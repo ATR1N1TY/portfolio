@@ -40,6 +40,7 @@ export const StyledAboutSection = styled.section`
     height: 100%;
     width: 53%;
     font-size: 2rem;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.8);
   }
 
   .aboutTitle h1 {

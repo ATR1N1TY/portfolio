@@ -19,6 +19,7 @@ export const StyledTechSection = styled.section`
     flex-direction: column;
     font-size: 3rem;
     text-overflow: clip;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.8);
   }
 
   .content {
