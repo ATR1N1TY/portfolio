@@ -7,33 +7,20 @@ import { StyledGlass } from "../components/glassmorphicCard/glass.style";
 
 import { StyledProjectCard } from "../components/projectCard/projectCard.style";
 
-import { MdCopyAll } from "react-icons/md";
-import { BsLinkedin } from "react-icons/bs";
-import { BsYoutube } from "react-icons/bs";
-import { BsGithub } from "react-icons/bs";
-import { BsTwitter } from "react-icons/bs";
-import { MdDone } from "react-icons/md";
-
 //after
 import Hero from "../components/hero/hero";
 import TechSection from "../components/techSection/techSection";
 import ProjectsSection from "../components/projectsSection/projectsSection";
 import AboutSection from "../components/aboutSection/aboutSection";
+import ContactSection from "../components/contactSection/contactSection";
 
 const Home: NextPage = () => {
   const [trigger, setTrigger] = useState<boolean>(false);
-  const [showElement, setShowElement] = useState<boolean>(false);
 
   const handleOverflow = () => {
     const body = window.document.body;
     trigger && (body.style.overflowY = "auto");
   };
-
-  useEffect(() => {
-    setTimeout(() => {
-      setShowElement(false);
-    }, 1000);
-  }, [showElement]);
 
   return (
     <div className="home">
@@ -43,34 +30,7 @@ const Home: NextPage = () => {
         <TechSection />
         <ProjectsSection />
         <AboutSection />
-
-        {/* contact */}
-        <section className="contact">
-          <div className="contactTitle">
-            <h1>Contact Me</h1>
-          </div>
-          <div className="contactContent">
-            <div className="social">
-              <BsLinkedin />
-              <BsGithub />
-              <BsTwitter />
-              <BsYoutube />
-            </div>
-            <div className="emailme">
-              <span>saba4inasaridze@gmail.com</span>
-              <MdCopyAll
-                onClick={() => {
-                  {
-                    setShowElement(true);
-                    navigator.clipboard.writeText("saba4inasaridze@gmail.com");
-                  }
-                }}
-                className="s"
-              />
-            </div>
-            <MdDone className="done" style={{ opacity: showElement ? 1 : 0 }} />
-          </div>
-        </section>
+        <ContactSection />
       </div>
 
       {/* <StyledThree trig={trigger} /> */}
