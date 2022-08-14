@@ -5,7 +5,6 @@ export const StyledProjectsSection = styled.section`
   justify-content: space-between;
 
   .projectsSection {
-    /* border: 2px solid violet; */
     height: 100%;
     width: 55%;
     padding: 2rem;
@@ -23,7 +22,6 @@ export const StyledProjectsSection = styled.section`
   }
 
   .projectsTitle {
-    /* border: 2px solid green; */
     color: white;
     height: 80%;
     width: 40%;
