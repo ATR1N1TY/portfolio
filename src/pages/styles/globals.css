@@ -1,15 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
 html,
 body {
-  /* overflow: hidden; */
   overflow-x: hidden;
   padding: 0;
   margin: 0;
   font-family: "Oxygen", sans-serif;
   width: 100vw;
   height: 100vh;
-  /* background: rgb(20, 10, 97); */
   background: linear-gradient(
     145deg,
     rgb(0, 0, 0) 0%,
@@ -31,7 +30,6 @@ a {
 
 .home {
   width: 100vw;
-  /* height: 100vh; */
   position: relative;
 }
 
@@ -56,11 +54,6 @@ a {
 blockquote {
   animation: spinNhide 0.5s cubic-bezier(0.88, 0.39, 0.47, 0.99);
 }
-
-/* .bg {
-  /* position: relative; */
-/* z-index: 10; */
-/* }  */
 
 @keyframes spinNhide {
   0% {
@@ -102,12 +95,7 @@ blockquote {
     rgba(136, 32, 200, 1) 59%,
     rgba(28, 28, 196, 1) 100%
   );
-  /* padding: 5px 20px; */
   border-radius: 50px;
-
-  /* background-clip: text; */
-  /* -webkit-background-clip: text; */
-  /* -webkit-text-fill-color: transparent; */
 }
 
 /* width */
