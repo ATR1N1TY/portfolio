@@ -4,6 +4,8 @@ import { StyledHero } from "./hero.style";
 import { StyledIntroScreen } from "../IntroScreen/introScreen.style";
 import { StyledGlass } from "../glassmorphicCard/glass.style";
 
+import { BsChevronDoubleDown } from "react-icons/bs";
+
 const Hero = (props: {
   trigger: boolean;
   setTrigger: Dispatch<SetStateAction<boolean>>;
@@ -28,6 +30,8 @@ const Hero = (props: {
           </StyledGlass>
         </div>
       )}
+
+      {trigger && <BsChevronDoubleDown className="scroll" />}
     </StyledHero>
   );
 };
