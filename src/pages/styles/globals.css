@@ -35,12 +35,6 @@ a {
   position: relative;
 }
 
-.hero {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-}
-
 .bg {
   width: 100vw;
   height: 100vh;
@@ -86,17 +80,6 @@ blockquote {
   100% {
     opacity: 1;
   }
-}
-
-.wrapper {
-  /* border: 1px solid red; */
-  width: 50%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  z-index: 10;
 }
 
 .gradient-blue {

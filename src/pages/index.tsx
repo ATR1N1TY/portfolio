@@ -26,6 +26,9 @@ import { BsGithub } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
 import { MdDone } from "react-icons/md";
 
+//after
+import Hero from "../components/hero/hero";
+
 const Home: NextPage = () => {
   const [trigger, setTrigger] = useState<boolean>(false);
   const [showElement, setShowElement] = useState<boolean>(false);
@@ -43,24 +46,7 @@ const Home: NextPage = () => {
 
   return (
     <div className="home">
-      <section className="hero">
-        {/* intro */}
-        {!trigger && <StyledIntroScreen triggerCallback={setTrigger} />}
-
-        {trigger && (
-          <div className="wrapper">
-            <StyledGlass>
-              <h1>Hi, I&#39;m Saba, Frontend Engineer</h1>
-              <h2>based in Tbilisi, Georgia</h2>
-              <p>
-                and I&#39;m eager to implement your UI/UX into maintainable code
-                with zest and determination to see your visions and dreams come
-                to fruition
-              </p>
-            </StyledGlass>
-          </div>
-        )}
-      </section>
+      <Hero trigger={trigger} setTrigger={setTrigger} />
 
       <div className="sections">
         <section className="techs">
