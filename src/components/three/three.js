@@ -1,21 +1,11 @@
-import { Suspense, useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef } from "react";
 import gsap from "gsap";
 import LoadingScreen from "../loadingScreen/LoadingScreen";
 //R3F
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { OrbitControls, Stars, Environment, Html } from "@react-three/drei";
-// import { AmbientLight } from "three";
-// import wfa from '../../../public/logoModel.glb'
-//libraires for importing logo model
-// import { useLoader } from "@react-three/fiber";
-// import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { Canvas, useThree } from "@react-three/fiber";
+import { Stars } from "@react-three/drei";
 import { useGLTF } from "@react-three/drei";
-
 import * as THREE from "three";
-// import * as THREE from ''
-// import React, { useRef } from 'react'
-// import { useGLTF } from '@react-three/drei'
-// import all from
 
 function Model(props) {
   const group = useRef();
@@ -49,16 +39,7 @@ function Model(props) {
 }
 
 function Rig() {
-  const { camera, mouse } = useThree();
-  const vec = new THREE.Vector3();
-
-  // let timeline = gsap.timeline({ repeatDelay: 1 });
-
-  // useEffect(() => {
-  //   console.log(mouse);
-  // }, [mouse]);
-
-  //rig should use useMouse hook which will tell mouse coordinates
+  const { camera } = useThree();
 
   gsap.to(camera.position, {
     x: -50,
@@ -69,21 +50,7 @@ function Rig() {
     },
     ease: "circ.out",
     duration: 2,
-    // repeat: -1,
   });
-
-  // gsap.from(camera.position, {
-  //   x: -50,
-  //   y: 20,
-  //   z: 300,
-  //   // onUpdate: function () {
-  //   //   camera.lookAt(0, 0, 0);
-  //   // },
-  //   // ease: "circ.out",
-  //   // duration: 10,
-  //   // repeat: -1,
-  //   delay: 2,
-  // });
 
   gsap.to(camera.position, {
     x: 150,
@@ -98,25 +65,12 @@ function Rig() {
     yoyo: true,
     delay: 2,
   });
-
-  // return useFrame(() => {
-  //   // console.log(mouse);
-  //   camera.position.lerp(vec.set(mouse.x * 50, mouse.y * 50, 300), 0.02);
-  // });
 }
 
 const Animation = ({ trig, className }) => {
-  // const cameraRef = useRef(null);
-  // const cam = Transition();
-  // const { camera } = useThree();
-
-  useEffect(() => {
-    console.log("rerender");
-    // console.log(camera);
-    // console.log(cam);
-  }, []);
   //camera starting position: [80, 80, 25]
   //end positon without orbit controls or some fancy shits:  [-50, 20, 300]
+
   return (
     <div className={className}>
       <Canvas camera={{ position: [80, 80, 25] }}>
@@ -139,23 +93,5 @@ const Animation = ({ trig, className }) => {
     </div>
   );
 };
-
-//what should we do
-
-//we know the starting position of the camera
-//the starting text should appear and also: "right click to continue"
-//there also should be counter about how much text is left
-//on second text "click to continue" isn't needed anymore
-
-//after all of the text is read, change the positon of the camera
-//and hide all the text components and display another component after
-//camera is done moving
-
-//now lock the three.js canvas and allow the webpage to be scrolled
-//
-
-//also the gradient should be animated
-
-//თუ ქარდები ამოიწურა დაათრიგერე ტრიგერი
 
 export default Animation;
