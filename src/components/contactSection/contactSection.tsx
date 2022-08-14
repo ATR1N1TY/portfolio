@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { StyledContactSection } from "./contactSection.style";
 import { MdCopyAll } from "react-icons/md";
 import { BsLinkedin } from "react-icons/bs";
@@ -9,6 +9,12 @@ import { MdDone } from "react-icons/md";
 
 const ContactSection = () => {
   const [showElement, setShowElement] = useState<boolean>(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowElement(false);
+    }, 1000);
+  }, [showElement]);
 
   return (
     <StyledContactSection className="contact">
