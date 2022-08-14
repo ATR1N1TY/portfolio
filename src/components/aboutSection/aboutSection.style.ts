@@ -59,4 +59,25 @@ export const StyledAboutSection = styled.section`
     position: relative;
     right: -100px;
   }
+
+  @media screen and (max-width: 1536px) {
+    .aboutTitle {
+      width: 45%;
+      margin-left: auto;
+    }
+
+    .aboutSection {
+      width: 55%;
+    }
+
+    .aboutTitle h1 {
+      font-size: 2.5rem;
+      left: 20px;
+    }
+
+    .picture {
+      width: 300px;
+      height: 300px;
+    }
+  }
 `;

@@ -32,4 +32,14 @@ export const StyledProjectsSection = styled.section`
     text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.8);
     font-size: 3rem;
   }
+
+  @media screen and (max-width: 1536px) {
+    .projectsSection {
+      width: 60%;
+    }
+    .projectsTitle {
+      height: 60%;
+      font-size: 2.5rem;
+    }
+  }
 `;
