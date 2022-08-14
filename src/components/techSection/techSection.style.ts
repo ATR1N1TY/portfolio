@@ -45,4 +45,25 @@ export const StyledTechSection = styled.section`
     transform: scale(1.1);
     cursor: pointer;
   }
+
+  @media screen and (max-width: 1536px) {
+    /* border: 3px solid red; */
+    .content {
+      gap: 0;
+      /* border: 3px solid green; */
+      /* width: 30%; */
+      padding: 4rem;
+      width: 55%;
+    }
+
+    .content > .tech {
+      width: 150px;
+      height: 150px;
+    }
+
+    .techTitle {
+      /* border: 3px solid red; */
+      width: 45%;
+    }
+  }
 `;
